@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+scriptDir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+# We use Alacritty's default Linux config directory as our storage location here.
+[[ -d $HOME/.config/alacritty/themes ]] || git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+[[ -d $HOME/.config/alacritty ]] || mkdir -p $HOME/.config/alacritty
+ln -sf $scriptDir/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+
+ln -sf $scriptDir/zshrc $HOME/.zshrc
+source $HOME/.zshrc
+
+[[ -d $HOME/.config/nvim ]] || ln -sf $scriptDir/nvim $HOME/.config/nvim
