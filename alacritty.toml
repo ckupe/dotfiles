@@ -4,3 +4,10 @@ import = [
 
 [shell]
 program="/usr/bin/zsh"
+
+[font]
+normal = { family = "NotoMono Nerd Font", style = "Regular" }
+bold = { family = "NotoMono Nerd Font", style = "Bold" }
+italic = { family = "NotoMono Nerd Font", style = "Italic" }
+bold_italic = { family = "NotoMono Nerd Font", style = "Bold Italic" }
+size = 11.25
