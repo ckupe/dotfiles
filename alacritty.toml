@@ -3,4 +3,4 @@ import = [
 ]
 
 [shell]
-program="/home/linuxbrew/.linuxbrew/bin/zsh"
+program="/usr/bin/zsh"
