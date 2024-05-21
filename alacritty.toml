@@ -3,7 +3,7 @@ import = [
 ]
 
 [shell]
-program="/usr/bin/zsh"
+program="tmux"
 
 [font]
 normal = { family = "NotoMono Nerd Font", style = "Regular" }
