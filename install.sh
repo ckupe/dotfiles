@@ -16,7 +16,7 @@ ln -sf $scriptDir/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.tom
 # Zsh
 [[ -d $HOME/.oh-my-zsh ]] || /bin/env bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 [[ -f $HOME/.oh-my-zsh/themes/ckupe.zsh-theme ]] || curl -s https://raw.githubusercontent.com/ckupe/ckupe.zsh-theme/HEAD/ckupe.zsh-theme -o $HOME/.oh-my-zsh/themes/ckupe.zsh-theme
-ln -sf $scriptDir/zsh/.zshrc $HOME/.zshrc
+ln -sf $scriptDir/zsh/zshrc $HOME/.zshrc
 
 # Tmux
 ln -sf $scriptDir/tmux/tmux.conf $HOME/.tmux.conf
