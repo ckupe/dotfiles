@@ -1,14 +1,22 @@
 #!/bin/zsh
 
-scriptDir=$(cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)
-[[ -d $HOME/.config/nvim ]] || ln -sf $scriptDir/nvim $HOME/.config/nvim
+# Self-install
+[[ -d $HOME/.config/ckupe-dotfiles]] || git clone git@github.com:ckupe/dotfiles.git $HOME/.config/.files
+scriptDir=$HOME/.config/.files
+
+# Neovim
+ln -sf $scriptDir/nvim $HOME/.config/nvim
+
+# Alacritty
 # We use Alacritty's default Linux config directory as our storage location here.
-[[ -d $HOME/.config/alacritty/themes ]] || git clone https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/themes
 [[ -d $HOME/.config/alacritty ]] || mkdir -p $HOME/.config/alacritty
-ln -sf $scriptDir/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+[[ -d $HOME/.config/alacritty/themes ]] || git clone https://github.com/alacritty/alacritty-theme $HOME/.config/alacritty/themes
+ln -sf $scriptDir/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 
-ln -sf $scriptDir/zshrc $HOME/.zshrc
-ln -sf $scriptDir/tmux.conf $HOME/.tmux.conf
-
+# Zsh
+[[ -d $HOME/.oh-my-zsh ]] || /bin/env bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 [[ -f $HOME/.oh-my-zsh/themes/ckupe.zsh-theme ]] || curl -s https://raw.githubusercontent.com/ckupe/ckupe.zsh-theme/HEAD/ckupe.zsh-theme -o $HOME/.oh-my-zsh/themes/ckupe.zsh-theme
+ln -sf $scriptDir/zsh/.zshrc $HOME/.zshrc
 
+# Tmux
+ln -sf $scriptDir/tmux/tmux.conf $HOME/.tmux.conf
