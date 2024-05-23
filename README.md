@@ -1,8 +1,9 @@
-# .dotfiles
+# dotfiles
+
 Personal dotfiles
 
 # Install
 
 ```bash
-source ./sourceme
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ckupe/dotfiles/HEAD/install.sh)"
 ```
