@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Self-install
-[[ -d $HOME/.config/ckupe-dotfiles]] || git clone git@github.com:ckupe/dotfiles.git $HOME/.config/.files
+[[ -d $HOME/.config/.files ]] || git clone git@github.com:ckupe/dotfiles.git $HOME/.config/.files
 scriptDir=$HOME/.config/.files
 
 # Neovim
