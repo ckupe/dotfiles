@@ -10,3 +10,5 @@ ln -sf $scriptDir/alacritty.toml $HOME/.config/alacritty/alacritty.toml
 ln -sf $scriptDir/zshrc $HOME/.zshrc
 ln -sf $scriptDir/tmux.conf $HOME/.tmux.conf
 
+[[ -f $HOME/.oh-my-zsh/themes/ckupe.zsh-theme ]] || curl -s https://raw.githubusercontent.com/ckupe/ckupe.zsh-theme/HEAD/ckupe.zsh-theme -o $HOME/.oh-my-zsh/themes/ckupe.zsh-theme
+
