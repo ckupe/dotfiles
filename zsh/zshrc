@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 if [[ -f /run/.toolboxenv ]]; then
   eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  alias podman='flatpak-spawn --host podman'
 fi
 
 #if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then

@@ -20,3 +20,6 @@ ln -sf $scriptDir/zsh/zshrc $HOME/.zshrc
 
 # Tmux
 ln -sf $scriptDir/tmux/tmux.conf $HOME/.tmux.conf
+
+# Toolbox
+ln -sf $scriptDir/containers $HOME/.config/containers
