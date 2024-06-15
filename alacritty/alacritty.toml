@@ -4,3 +4,7 @@ import = [
 
 [shell]
 program="tmux"
+
+[window]
+startup_mode="Fullscreen"
+decorations="None"
