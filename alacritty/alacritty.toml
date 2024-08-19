@@ -8,3 +8,6 @@ program="tmux"
 [window]
 startup_mode="Fullscreen"
 decorations="None"
+
+[font]
+size=14
