@@ -9,5 +9,5 @@ program="tmux"
 size=14
 
 [window]
-opacity = 0.9 
+opacity = 1
 decorations = "Transparent"
