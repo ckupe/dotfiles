@@ -4,8 +4,15 @@
 [[ -d $HOME/.config/.files ]] || git clone git@github.com:ckupe/dotfiles.git $HOME/.config/.files
 scriptDir=$HOME/.config/.files
 
+# Nerd Fonts
+mkdir -p $HOME/.local/share/fonts/jetbrainsmononerdfont
+wget -qO $HOME/Downloads/JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/JetBrainsMono.zip
+unzip $HOME/Downloads/JetBrainsMono.zip -d $HOME/.local/share/fonts/jetbrainsmononerdfont
+fc-cache -v
+
 # Neovim
 ln -sf $scriptDir/nvim $HOME/.config/nvim
+nvim --headless "+Lazy! sync" +qa
 
 # Alacritty
 # We use Alacritty's default Linux config directory as our storage location here.
@@ -23,3 +30,5 @@ ln -sf $scriptDir/tmux/tmux.conf $HOME/.tmux.conf
 
 # Toolbox
 ln -sf $scriptDir/containers $HOME/.config/containers
+
+
